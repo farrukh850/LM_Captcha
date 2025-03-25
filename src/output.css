@@ -183,9 +183,6 @@
   .top-\[50\%\] {
     top: 50%;
   }
-  .left-1 {
-    left: calc(var(--spacing) * 1);
-  }
   .left-1\/2 {
     left: calc(1/2 * 100%);
   }
@@ -203,9 +200,6 @@
   }
   .grid {
     display: grid;
-  }
-  .table {
-    display: table;
   }
   .h-12 {
     height: calc(var(--spacing) * 12);
@@ -240,13 +234,6 @@
   .flex-1 {
     flex: 1;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .-translate-x-1 {
-    --tw-translate-x: calc(var(--spacing) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -260,9 +247,6 @@
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-10 {
     grid-template-columns: repeat(10, minmax(0, 1fr));
@@ -313,17 +297,11 @@
   .bg-\[\#F9F9F9\] {
     background-color: #F9F9F9;
   }
-  .bg-black {
-    background-color: var(--color-black);
-  }
   .bg-black\/50 {
     background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
   }
   .bg-black\/60 {
     background-color: color-mix(in oklab, var(--color-black) 60%, transparent);
-  }
-  .bg-white {
-    background-color: var(--color-white);
   }
   .bg-white\/30 {
     background-color: color-mix(in oklab, var(--color-white) 30%, transparent);
@@ -424,9 +402,6 @@
   .italic {
     font-style: italic;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow-\[0_-10px_8px_\#0000001A\] {
     --tw-shadow: 0 -10px 8px var(--tw-shadow-color, #0000001A);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -435,10 +410,6 @@
     --tw-shadow: 0 0px 22px var(--tw-shadow-color, #FF930F);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .backdrop-blur-\[3px\] {
     --tw-backdrop-blur: blur(3px);
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
@@ -446,10 +417,6 @@
   }
   .backdrop-blur-xs {
     --tw-backdrop-blur: blur(var(--blur-xs));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
@@ -468,14 +435,9 @@
       height: calc(var(--spacing) * 6);
     }
   }
-  .max-sm\:h-\[135px\] {
+  .max-sm\:h-\[150px\] {
     @media (width < 40rem) {
-      height: 135px;
-    }
-  }
-  .max-sm\:h-\[140px\] {
-    @media (width < 40rem) {
-      height: 140px;
+      height: 150px;
     }
   }
   .max-sm\:min-h-auto {
@@ -594,7 +556,7 @@
     font-family: "Poppins", sans-serif;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .captcha-card {
     top: 45%;
   }
@@ -759,11 +721,6 @@
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-backdrop-blur {
   syntax: "*";
