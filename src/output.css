@@ -16,6 +16,8 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-semibold: 600;
@@ -183,6 +185,15 @@
   .top-\[50\%\] {
     top: 50%;
   }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
   .left-1 {
     left: calc(var(--spacing) * 1);
   }
@@ -197,6 +208,9 @@
   }
   .col-span-2 {
     grid-column: span 2 / span 2;
+  }
+  .mx-auto {
+    margin-inline: auto;
   }
   .flex {
     display: flex;
@@ -287,12 +301,6 @@
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
-  .gap-3 {
-    gap: calc(var(--spacing) * 3);
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
@@ -462,14 +470,56 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
+  .max-2xl\:text-3xl {
+    @media (width < 96rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+  }
   .max-xl\:flex-col {
     @media (width < 80rem) {
       flex-direction: column;
     }
   }
+  .max-lg\:max-h-\[350px\] {
+    @media (width < 64rem) {
+      max-height: 350px;
+    }
+  }
+  .max-lg\:max-h-\[450px\] {
+    @media (width < 64rem) {
+      max-height: 450px;
+    }
+  }
+  .max-lg\:max-w-\[342px\] {
+    @media (width < 64rem) {
+      max-width: 342px;
+    }
+  }
+  .max-lg\:max-w-\[500px\] {
+    @media (width < 64rem) {
+      max-width: 500px;
+    }
+  }
   .max-lg\:gap-5 {
     @media (width < 64rem) {
       gap: calc(var(--spacing) * 5);
+    }
+  }
+  .max-lg\:text-3xl {
+    @media (width < 64rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+  }
+  .max-md\:max-h-\[350px\] {
+    @media (width < 48rem) {
+      max-height: 350px;
+    }
+  }
+  .max-md\:max-w-\[342px\] {
+    @media (width < 48rem) {
+      max-width: 342px;
     }
   }
   .max-sm\:h-6 {
@@ -482,9 +532,39 @@
       height: 150px;
     }
   }
+  .max-sm\:max-h-\[220px\] {
+    @media (width < 40rem) {
+      max-height: 220px;
+    }
+  }
+  .max-sm\:max-h-\[272px\] {
+    @media (width < 40rem) {
+      max-height: 272px;
+    }
+  }
+  .max-sm\:max-h-\[300px\] {
+    @media (width < 40rem) {
+      max-height: 300px;
+    }
+  }
+  .max-sm\:max-h-\[350px\] {
+    @media (width < 40rem) {
+      max-height: 350px;
+    }
+  }
   .max-sm\:min-h-auto {
     @media (width < 40rem) {
       min-height: auto;
+    }
+  }
+  .max-sm\:min-h-full {
+    @media (width < 40rem) {
+      min-height: 100%;
+    }
+  }
+  .max-sm\:max-w-\[342px\] {
+    @media (width < 40rem) {
+      max-width: 342px;
     }
   }
   .max-sm\:flex-col {
@@ -575,6 +655,51 @@
     @media (width < 40rem) {
       --tw-leading: 14px;
       line-height: 14px;
+    }
+  }
+  .md\:absolute {
+    @media (width >= 48rem) {
+      position: absolute;
+    }
+  }
+  .md\:right-0 {
+    @media (width >= 48rem) {
+      right: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:bottom-0 {
+    @media (width >= 48rem) {
+      bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:left-0 {
+    @media (width >= 48rem) {
+      left: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:absolute {
+    @media (width >= 64rem) {
+      position: absolute;
+    }
+  }
+  .lg\:right-0 {
+    @media (width >= 64rem) {
+      right: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:bottom-0 {
+    @media (width >= 64rem) {
+      bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:left-0 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:min-h-screen {
+    @media (width >= 64rem) {
+      min-height: 100vh;
     }
   }
   .xl\:absolute {
